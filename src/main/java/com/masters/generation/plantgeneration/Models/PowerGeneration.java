@@ -1,6 +1,10 @@
 package com.masters.generation.plantgeneration.Models;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "powergeneration") //which takes some values like the name you are going to name your table
@@ -12,13 +16,24 @@ public class PowerGeneration {
     private String plantName;
     private String primaryFuel;
     private String otherFuel;
+    private String powerGeneration;
 
-    public PowerGeneration (){}
+    public PowerGeneration () { }
 
-    public PowerGeneration(String plantName, String primaryFuel, String otherFuel) {
+    public PowerGeneration(String plantName, String primaryFuel, String otherFuel, String powerGeneration) {
         this.plantName = plantName;
         this.primaryFuel = primaryFuel;
         this.otherFuel = otherFuel;
+        this.powerGeneration = powerGeneration;
+    }
+
+    public PowerGeneration(Integer Id, String plantName, String primaryFuel, String otherFuel, String powerGeneration){ //
+        super(); // will get no data if this is missing, test this again (Conclusion)
+        this.Id = Id;
+        this.plantName = plantName;
+        this.primaryFuel = primaryFuel;
+        this.otherFuel = otherFuel;
+        this.powerGeneration = powerGeneration;
     }
 
     public Integer getId() {
@@ -53,6 +68,14 @@ public class PowerGeneration {
         this.otherFuel = otherFuel;
     }
 
+    public String getPowerGeneration() {
+        return powerGeneration;
+    }
+
+    public void setPowerGeneration(String powerGeneration) {
+        this.powerGeneration = powerGeneration;
+    }
+
     @Override
     public String toString() {
         return "PowerGeneration{" +
@@ -60,6 +83,7 @@ public class PowerGeneration {
                 ", plantName='" + plantName + '\'' +
                 ", primaryFuel='" + primaryFuel + '\'' +
                 ", otherFuel='" + otherFuel + '\'' +
+                ", powerGeneration=" + powerGeneration +
                 '}';
     }
 }
