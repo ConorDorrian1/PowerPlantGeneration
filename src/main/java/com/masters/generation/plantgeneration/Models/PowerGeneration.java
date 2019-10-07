@@ -36,6 +36,9 @@ public class PowerGeneration {
         this.powerGeneration = powerGeneration;
     }
 
+    public PowerGeneration(Integer id, int i) {
+    }
+
     public Integer getId() {
         return Id;
     }
