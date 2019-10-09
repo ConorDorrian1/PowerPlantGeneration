@@ -19,7 +19,7 @@ public class PowerGenerationController {
 
     @RequestMapping("/{id}")
     public PowerGeneration pg(@PathVariable("id") Integer Id) {
-        return new PowerGeneration(Id, 26435);
+        return new PowerGeneration(Id,2065);
     }
 
     @GetMapping("/generation") //get all details
