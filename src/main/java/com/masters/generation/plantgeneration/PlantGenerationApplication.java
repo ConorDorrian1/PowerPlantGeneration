@@ -6,7 +6,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages={"com.masters.generation.plantgeneration.Controller"}) //From package above, so that controller can see and access this file
+//@ComponentScan(basePackages={"com.masters.generation.plantgeneration.Controller"}) //From package above, so that controller can see and access this file
 @EnableEurekaClient
 public class PlantGenerationApplication {
 
